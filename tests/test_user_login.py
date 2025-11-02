@@ -1,7 +1,6 @@
 import pytest
-import requests
 import allure
-from ..helpers import generate_user_data, register_new_user, delete_user, login_user, BASE_URL
+from ..helpers import register_new_user, delete_user, login_user, BASE_URL
 
 
 class TestUserLogin:

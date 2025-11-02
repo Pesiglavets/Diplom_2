@@ -1,5 +1,4 @@
 import pytest
-import requests
 import allure
 from ..helpers import get_ingredients, create_order, register_new_user, delete_user, login_user, get_user_orders, BASE_URL
 
