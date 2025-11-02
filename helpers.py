@@ -48,3 +48,20 @@ def delete_user(auth_token):
         response = requests.delete(f'{BASE_URL}/auth/user', headers=headers)
         return response
     return None
+
+def get_ingredients():
+    response = requests.get(f'{BASE_URL}/ingredients')
+    if response.status_code == 200:
+        return response.json()["data"]
+    return None
+
+def create_order(ingredients=None, auth_token=None):
+    payload = {}
+    if ingredients is not None: 
+        payload["ingredients"] = ingredients
+    headers = {}
+    if auth_token:
+        headers['Authorization'] = auth_token
+    response = requests.post(f'{BASE_URL}/orders', data=payload, headers=headers)
+    return response
+
