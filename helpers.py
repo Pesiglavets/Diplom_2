@@ -65,3 +65,9 @@ def create_order(ingredients=None, auth_token=None):
     response = requests.post(f'{BASE_URL}/orders', data=payload, headers=headers)
     return response
 
+def get_user_orders(auth_token=None):
+    headers = {}
+    if auth_token:
+        headers['Authorization'] = auth_token
+    response = requests.get(f'{BASE_URL}/orders', headers=headers)
+    return response

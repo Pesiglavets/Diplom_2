@@ -3,6 +3,7 @@ import requests
 import allure
 from ..helpers import get_ingredients, create_order, register_new_user, delete_user, login_user, BASE_URL
 
+
 class TestOrderCreation:
     @allure.title("Тест  создания заказа с авторизацией и ингредиентами")
     @allure.description("Проверка успешного создания заказа авторизованным пользователем с игнредиентами")
