@@ -1,6 +1,9 @@
 import pytest
 import allure
-from ..helpers import get_ingredients, create_order, register_new_user, delete_user, login_user, get_user_orders, BASE_URL
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from helpers import get_ingredients, create_order, register_new_user, delete_user, login_user, get_user_orders
 
 
 class TestUserOrders:
